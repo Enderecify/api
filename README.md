@@ -3,11 +3,13 @@ Use este repositório para aprender mais sobre a API, requisitar funcionalidades
 ### Contribute
 
 1- Clone repo.
+
 2-
 ```sh
 $ mix deps.get
 $ mix phx.server
 ```
+
 3- Have fun.
 
 ### Installation
