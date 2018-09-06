@@ -16,7 +16,7 @@ defmodule EnderecifyApi.MixProject do
 
   defp package do
     [
-      description: "API plug used at enderecify.com",
+      description: "GraphQL API used at enderecify.com",
       files: ["lib", "mix.exs", "README*"],
       maintainers: ["Rafael Garcia"],
       licenses: ["MIT"],
@@ -38,8 +38,6 @@ defmodule EnderecifyApi.MixProject do
   defp deps do
     [
       {:phoenix_ecto, "~> 3.3"},
-      {:postgrex, ">= 0.0.0"},
-      {:jason, "~> 1.0"},
       {:absinthe, "~> 1.4.13"},
       {:absinthe_plug, "~> 1.4.0"},
       {:absinthe_ecto, "~> 0.1.3"}
