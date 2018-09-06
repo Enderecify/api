@@ -29,7 +29,9 @@ defmodule EnderecifyApi do
       import Ecto.Query, warn: false
       import Ecto
 
-      def repo, do: Application.get_env(:enderecify_api, :repo)
+      def repo do
+        Application.get_env(:enderecify_api, :repo, Enderecify.Repo)
+      end
     end
   end
 
