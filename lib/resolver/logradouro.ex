@@ -25,7 +25,6 @@ defmodule EnderecifyApi.Resolver.Logradouro do
 
   def handle(_, _), do: {:error, "Especifique uma busca"}
 
-
   # return Ex: Rua Nome Da Rua, Centro
   def linha1(logradouro, _args, _ctx) do
     bairro = bairro(logradouro).nome
@@ -94,7 +93,7 @@ defmodule EnderecifyApi.Resolver.Logradouro do
     query
     |> limit(6)
     |> repo().all()
-    |> Enum.map(&(Map.get(&1, :record_id)))
+    |> Enum.map(&Map.get(&1, :record_id))
     |> all_logradouros_with_ids()
   end
 
@@ -113,7 +112,7 @@ defmodule EnderecifyApi.Resolver.Logradouro do
 
   defp join_address(array, join_with \\ ", ") do
     array
-    |> Enum.reject(&(is_nil(&1)))
+    |> Enum.reject(&is_nil(&1))
     |> Enum.join(join_with)
   end
 

@@ -5,8 +5,8 @@ defmodule EnderecifyApi.Schema.Regiao do
   @primary_key {:sigla, :string, []}
 
   schema "regioes" do
-    has_many :estados, Estado, foreign_key: :sigla_regiao
-    field :nome, :string
+    has_many(:estados, Estado, foreign_key: :sigla_regiao)
+    field(:nome, :string)
   end
 
   @doc false

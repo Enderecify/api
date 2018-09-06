@@ -5,8 +5,8 @@ defmodule EnderecifyApi.Schema.Bairro do
   schema "bairros" do
     belongs_to(:estado, Estado, foreign_key: :sigla_estado, references: :sigla, type: :string)
     belongs_to(:localidade, Localidade)
-    field :nome, :string
-    field :abbr, :string
+    field(:nome, :string)
+    field(:abbr, :string)
   end
 
   @doc false
