@@ -29,16 +29,15 @@ defmodule EnderecifyApi do
       import Ecto.Query, warn: false
       import Ecto
 
-      def repo do
-        Application.get_env(:enderecify_api, :repo, Enderecify.Repo)
-      end
+      def repo, do: Application.get_env(:enderecify_api, :repo)
     end
   end
 
   def graphql_schema do
     quote do
       use Absinthe.Schema.Notation
-      use Absinthe.Ecto, repo: Application.get_env(:enderecify_api, :repo)
+      use Absinthe.Ecto,
+        repo: Application.get_env(:enderecify_api, :repo, Enderecify.FakeRepo)
       import Ecto.Query, warn: false
     end
   end
