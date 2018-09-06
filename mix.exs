@@ -41,7 +41,8 @@ defmodule EnderecifyApi.MixProject do
       {:phoenix_ecto, "~> 3.3"},
       {:absinthe, "~> 1.4.13"},
       {:absinthe_plug, "~> 1.4.0"},
-      {:absinthe_ecto, "~> 0.1.3"}
+      {:absinthe_ecto, "~> 0.1.3"},
+      {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
 end

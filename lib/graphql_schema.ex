@@ -1,4 +1,8 @@
 defmodule EnderecifyApi.GraphqlSchema do
+  @moduledoc """
+  Contains all queries available at enderecify.com
+  """
+
   use Absinthe.Schema
 
   import_types(EnderecifyApi.Graphql.Types)
