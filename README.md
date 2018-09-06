@@ -18,14 +18,12 @@ $ mix phx.server
 
 ```ex
 # mix.exs
-
 {:enderecify_api,  "~> 1.0"}
 ```
 
 
 ```ex
 # config/config.exs
-
 config :enderecify_api,
   repo: MyApp.Repo
 ```
