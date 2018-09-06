@@ -10,7 +10,8 @@ defmodule EnderecifyApi.MixProject do
       elixir: "~> 1.7",
       start_permanent: Mix.env() == :prod,
       package: package(),
-      deps: deps()
+      deps: deps(),
+      source_url: "https://github.com/Enderecify/api"
     ]
   end
 
