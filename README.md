@@ -1,21 +1,18 @@
-# EnderecifyApi
+Use este repositório para aprender mais sobre a API, requisitar funcionalidades, informar bugs ou apenas dar um oi.
 
-**TODO: Add description**
+### Contribute
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `enderecify_api` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:enderecify_api, "~> 0.1.0"}
-  ]
-end
+1- Clone repo.
+2-
+```sh
+$ mix deps.get
+$ mix phx.server
 ```
+3- Have fun.
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/enderecify_api](https://hexdocs.pm/enderecify_api).
+### Installation
 
+```ex
+config :enderecify_api,
+  repo: MyApp.Repo
+```
