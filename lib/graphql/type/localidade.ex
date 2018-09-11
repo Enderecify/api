@@ -6,5 +6,8 @@ defmodule EnderecifyApi.Graphql.Type.Localidade do
     field(:nome, :string)
     field(:abbr, :string, description: "Abreviação. Ex: Santa Fé - Sta Fé, Vila Flor - Vl Flor")
     field(:ibge_municipio_id, :string, description: "ID do município na API do IBGE. Ex: 1200351 - https://servicodados.ibge.gov.br/api/v1/localidades/municipios/1200351")
+    field(:bairros, list_of(:bairro), resolve: assoc(:bairros, fn(query, _args, _ctx) ->
+      query |> order_by(:nome)
+    end))
   end
 end
